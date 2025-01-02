@@ -27,6 +27,8 @@ class SearchFlightResults(BaseDriver):
     def get_search_flight_results(self):
         return self.wait_for_presence_of_all_elements(By.XPATH, self.SEARCH_FLIGHT_RESULTS)
 
+    # Changes
+
     def filter_flights_by_stop(self, by_stop):
         if by_stop == "1 Stop":
             self.get_filter_by_one_stop_icon().click()
